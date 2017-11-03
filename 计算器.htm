@@ -1,0 +1,447 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><META content="IE=5.0000" http-equiv="X-UA-Compatible">
+<TITLE>计算器</TITLE>
+<META charset=UTF-8>
+<STYLE>BODY {
+	FONT-SIZE: 24px; FONT-FAMILY: Arial, Georgia, "Times New Roman", Times, serif; COLOR: #555; TEXT-ALIGN: center; BACKGROUND-COLOR: #555
+}
+BODY DIV {
+	MARGIN-TOP: 5px; align: center
+}
+#calculator {
+	OVERFLOW: hidden; BORDER-TOP: #fff 2px solid; HEIGHT: 550px; BORDER-RIGHT: #fff 2px solid; WIDTH: 350px; BORDER-BOTTOM: #fff 2px solid; BORDER-LEFT: #fff 2px solid; MARGIN: 10px auto; BACKGROUND-COLOR: #f2f2f2; align: center
+}
+.rescult {
+	PADDING-BOTTOM: 0px; PADDING-TOP: 10px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; align: center
+}
+#result {
+	FONT-SIZE: 35px; OVERFLOW: hidden; WORD-WRAP: normal; BORDER-TOP: #c0c0c0; HEIGHT: 40px; BORDER-RIGHT: #c0c0c0; WIDTH: 300px; BORDER-BOTTOM: #c0c0c0; DIRECTION: ltr; TEXT-ALIGN: right; BORDER-LEFT: #c0c0c0; BACKGROUND-COLOR: #c0c0c0
+}
+#result0 {
+	FONT-SIZE: 35px; OVERFLOW: hidden; WORD-WRAP: normal; BORDER-TOP: #c0c0c0; HEIGHT: 40px; BORDER-RIGHT: #c0c0c0; WIDTH: 300px; BORDER-BOTTOM: #c0c0c0; DIRECTION: ltr; TEXT-ALIGN: right; BORDER-LEFT: #c0c0c0; BACKGROUND-COLOR: #c0c0c0
+}
+#result0 {
+	FONT-SIZE: 25px
+}
+section {
+	HEIGHT: 50px; WIDTH: 100px; FLOAT: left; PADDING-BOTTOM: 10px; PADDING-TOP: 0px; PADDING-LEFT: 20px; PADDING-RIGHT: 200px
+}
+.checkbox {
+	POSITION: relative; DISPLAY: inline-block
+}
+.checkbox LABEL {
+	FONT-SIZE: 20px; HEIGHT: 30px; WIDTH: 90px; POSITION: relative; TEXT-ALIGN: center; PADDING-TOP: 5px; DISPLAY: inline-block; border-radius: 46px; -webkit-transition: 0.4s; transition: 0.4s
+}
+.checkbox LABEL:after {
+	HEIGHT: 20px; WIDTH: 45px; BACKGROUND: #f2f2f2; POSITION: absolute; PADDING-TOP: 20px; LEFT: 0px; Z-INDEX: 2; TOP: -5px; border-radius: 40%; -webkit-transition: 0.4s; transition: 0.4s; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)
+}
+.checkbox INPUT {
+	CURSOR: pointer; HEIGHT: 100%; WIDTH: 100%; POSITION: absolute; LEFT: 0px; Z-INDEX: 5; TOP: 0px; opacity: 0
+}
+.checkbox INPUT:hover + LABEL:after {
+	box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.2), 0 3px 8px 0 rgba(0, 0, 0, 0.2)
+}
+.checkbox INPUT:unknown + LABEL:after {
+	LEFT: 45px
+}
+.model-1 .checkbox INPUT:unknown + LABEL {
+	BACKGROUND: #ccc
+}
+.model-1 .checkbox INPUT:unknown + LABEL:after {
+	BACKGROUND: #f2f2f2
+}
+#rows {
+	PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; align: center
+}
+#below {
+	MARGIN-BOTTOM: 30px; WIDTH: 300px; MARGIN-TOP: 0px; MARGIN-LEFT: 25px
+}
+#left {
+	MARGIN-TOP: 0px; FLOAT: left
+}
+#right {
+	MARGIN-TOP: 10px; FLOAT: right
+}
+.row1 {
+	align: center
+}
+.row2 {
+	align: center
+}
+.row3 {
+	align: center
+}
+#below {
+	align: center
+}
+.row3 {
+	MARGIN-BOTTOM: 0px
+}
+#bt1 {
+	FONT-SIZE: 18px; CURSOR: pointer; HEIGHT: 70px; WIDTH: 70px; BACKGROUND-COLOR: #eaeaea
+}
+#bt2 {
+	FONT-SIZE: 18px; CURSOR: pointer; HEIGHT: 70px; WIDTH: 70px; BACKGROUND-COLOR: #eaeaea
+}
+#bt3 {
+	FONT-SIZE: 18px; CURSOR: pointer; HEIGHT: 70px; WIDTH: 70px; BACKGROUND-COLOR: #eaeaea
+}
+#bt4 {
+	FONT-SIZE: 18px; CURSOR: pointer; HEIGHT: 70px; WIDTH: 70px; BACKGROUND-COLOR: #eaeaea
+}
+#bt5 {
+	FONT-SIZE: 18px; CURSOR: pointer; HEIGHT: 70px; WIDTH: 70px; BACKGROUND-COLOR: #eaeaea
+}
+#bt6 {
+	FONT-SIZE: 18px; CURSOR: pointer; HEIGHT: 70px; WIDTH: 70px; BACKGROUND-COLOR: #eaeaea
+}
+#bt7 {
+	FONT-SIZE: 18px; CURSOR: pointer; HEIGHT: 70px; WIDTH: 70px; BACKGROUND-COLOR: #eaeaea
+}
+#bt8 {
+	FONT-SIZE: 18px; CURSOR: pointer; HEIGHT: 70px; WIDTH: 70px; BACKGROUND-COLOR: #eaeaea
+}
+#bt9 {
+	FONT-SIZE: 18px; CURSOR: pointer; HEIGHT: 70px; WIDTH: 70px; BACKGROUND-COLOR: #eaeaea
+}
+#bt10 {
+	FONT-SIZE: 18px; CURSOR: pointer; HEIGHT: 70px; WIDTH: 70px; BACKGROUND-COLOR: #eaeaea
+}
+#bt11 {
+	FONT-SIZE: 18px; CURSOR: pointer; HEIGHT: 70px; WIDTH: 70px; BACKGROUND-COLOR: #eaeaea
+}
+#bt12 {
+	FONT-SIZE: 18px; CURSOR: pointer; HEIGHT: 70px; WIDTH: 70px; BACKGROUND-COLOR: #eaeaea
+}
+#bt13 {
+	FONT-SIZE: 18px; CURSOR: pointer; HEIGHT: 70px; WIDTH: 70px; BACKGROUND-COLOR: #eaeaea
+}
+#bt14 {
+	FONT-SIZE: 18px; CURSOR: pointer; HEIGHT: 70px; WIDTH: 70px; BACKGROUND-COLOR: #eaeaea
+}
+#bt15 {
+	FONT-SIZE: 18px; CURSOR: pointer; HEIGHT: 70px; WIDTH: 70px; BACKGROUND-COLOR: #eaeaea
+}
+#bt16 {
+	FONT-SIZE: 18px; CURSOR: pointer; HEIGHT: 70px; WIDTH: 70px; BACKGROUND-COLOR: #eaeaea
+}
+#bt17 {
+	FONT-SIZE: 18px; CURSOR: pointer; HEIGHT: 70px; WIDTH: 70px; BACKGROUND-COLOR: #eaeaea
+}
+#bt18 {
+	FONT-SIZE: 18px; CURSOR: pointer; HEIGHT: 70px; WIDTH: 70px; BACKGROUND-COLOR: #eaeaea
+}
+#bt16 {
+	WIDTH: 145px
+}
+#bt18 {
+	HEIGHT: 140px
+}
+#sci {
+	DISPLAY: none
+}
+#sci BUTTON {
+	FONT-SIZE: 18px; CURSOR: pointer; HEIGHT: 55px; WIDTH: 55px; BACKGROUND-COLOR: #eaeaea
+}
+#record {
+	FONT-SIZE: 15px; FLOAT: right; COLOR: #555
+}
+#record:hover {
+	COLOR: red
+}
+</STYLE>
+
+<SCRIPT>
+  var status=0;   
+var calcu=0;    
+function num(x){
+    var str0=document.getElementById('result0').value;
+    var str=document.getElementById('result').value;
+    if(str0.indexOf("=")>0){
+        document.getElementById('result0').value='';
+        document.getElementById('result').value='0';
+        str=document.getElementById('result').value;
+    }
+    if(str=="0")
+        str='';
+    str+=String(x);
+    document.getElementById('result').value=str;
+    status=0;
+}
+function dot(){
+    var str0=document.getElementById('result0').value;
+    var str=document.getElementById('result').value;
+    if(str0.indexOf("=")>0){
+        document.getElementById('result0').value='';
+        document.getElementById('result').value='0';
+        str=document.getElementById('result').value;
+    }
+    str=str+'.';
+    document.getElementById('result').value=str;
+}
+function sin(){
+    calcu=1;
+    cal();
+}
+function cos(){
+    calcu=2;
+    cal();
+}
+function tan(){
+    calcu=3;
+    cal();
+}
+function divide1(){
+    calcu=4;
+    cal();
+}
+function ln(){
+    calcu=5;
+    cal();
+}
+function log(){
+    calcu=6;
+    cal();
+}
+function cal(){
+    var str0=document.getElementById('result0').value;
+    var str=document.getElementById('result').value;
+    if(str0.indexOf("=")>0){
+        document.getElementById('result0').value='';
+        document.getElementById('result').value='0';
+        str=document.getElementById('result').value;
+    }
+    if(str=="0")
+        str='';
+    switch(calcu){
+        case 1: str+=String("sin(");break;
+        case 2: str+=String("cos(");break;
+        case 3: str+=String("tan(");break;
+        case 4: str+=String("1/");break;
+        case 5: str+=String("ln(");break;
+        case 6: str+=String("log(");break;
+    }
+    document.getElementById('result').value=str;
+    status=1;
+}
+function pow1(){
+    calcu=1;
+    powS();
+}
+function pow2(){
+    calcu=2;
+    powS();
+}
+function quyu(){
+    calcu=3;
+    powS();
+}
+function powS(){
+    if(status == 1)
+        return;
+    var strpow0=document.getElementById('result0').value;
+    var strpow=document.getElementById('result').value;
+    if(strpow0.indexOf("=")>0){
+        document.getElementById('result0').value='';
+        strpow=document.getElementById('result').value;
+    }
+    switch(calcu){
+        case 1: strpow+=String('^');
+                break;
+        case 2: if(strpow=='0')
+                    strpow="√";
+                else{
+                    strpow+=String('√');
+                }
+                break;
+        case 3: strpow+=String("%");
+                break;
+    }
+    document.getElementById('result').value=strpow;
+    status=1;
+}
+function plus(){
+    calcu=1;
+    calculate();
+}
+function times(){
+    calcu=2;
+    calculate();
+}
+function divide(){
+    calcu=3;
+    calculate();
+}
+function calculate(){
+    if(status==1)
+        return;
+    var str0=document.getElementById('result0').value;
+    var str=document.getElementById('result').value;
+    if(str0.indexOf("=")>0 ){
+        document.getElementById('result0').value='';
+        str=document.getElementById('result').value;
+    }
+    if(str=='')
+        str='0';
+    switch(calcu){
+        case 1: str+='+';break;
+        case 2: str+='×';break;
+        case 3: str+='÷';break;
+    }
+    document.getElementById('result').value=str;
+    status=1;
+}
+function minus(){
+    var str0=document.getElementById('result0').value;
+    var str=document.getElementById('result').value;
+    if(str0.indexOf("=")>0){
+        document.getElementById('result0').value='';
+        str=document.getElementById('result').value+'-';
+    }
+    else
+        str+='-';
+    document.getElementById('result').value=str;
+}
+function zero(){
+    document.getElementById('result0').value="";
+    document.getElementById('result').value="0";
+}
+function back(){
+    var str0=document.getElementById('result0').value;
+    var str=document.getElementById('result').value;
+    if(str0.indexOf("=")>0 || str=='')
+        return;
+    var str1=str.substr(0,(str.length)-1)
+    document.getElementById('result').value=str1;
+}
+function equal(){
+    var str0=document.getElementById('result').value;
+    if(str0=="")
+        return;
+    var str=str0.replace(/×/g,'*');    
+    str=str.replace(/÷/g,'/');
+    str=str.replace(/π/g,'Math.PI');
+    if(str.indexOf("sin")>=0){
+        str=str.replace(/sin/g,'Math.round(Math.sin');
+        str+='*1000000)/1000000';
+        document.getElementById('result0').value=str0.concat("=");
+        document.getElementById('result').value=eval(str);
+    }
+    else if(str.indexOf("cos")>=0){
+        str=str.replace(/cos/g,'Math.round(Math.cos');
+        str+='*1000000)/1000000';
+        document.getElementById('result0').value=str0.concat("=");
+        document.getElementById('result').value=eval(str);
+    }
+    else if(str.indexOf("tan")>=0){
+        str=str.replace(/tan/g,'Math.round(Math.tan');
+        str+='*1000000)/1000000';
+        document.getElementById('result0').value=str0.concat("=");
+        document.getElementById('result').value=eval(str);
+    }
+    else if(str.indexOf("^")>=0){
+        var pos=str0.indexOf('^');
+        var pow1=str0.substring(0,pos);
+        var pow2=str0.substring(pos+1,str0.length+1);
+        result=Math.pow(pow1, pow2);
+        document.getElementById('result0').value=str0.concat("=");
+        document.getElementById('result').value=eval(result);
+    }
+    else if(str.indexOf("√")>=0){
+        var pos=str0.indexOf('√');
+        var pow1=str0.substring(0,pos);
+        var pow2=str0.substring(pos+1,str0.length+1);
+        if(pow1==''){
+            result=Math.pow(pow2,0.5);
+            document.getElementById('result0').value=str0.concat("=");
+            document.getElementById('result').value=eval(result);
+        }
+        else{
+            result=Math.pow(pow2, 1/pow1);
+            document.getElementById('result0').value=str0.concat("=");
+            document.getElementById('result').value=eval(result);
+        }
+    }
+    else if(str.indexOf("ln")>=0){
+        var str=str0.replace(/ln/g,'Math.round(Math.log');
+        str+='*1000000)/1000000';
+        document.getElementById('result0').value=str0.concat("=");
+        document.getElementById('result').value=eval(str);
+    }
+    else if(str.indexOf("log")>=0){
+        var str=str0.replace(/log/g,'Math.log');
+        str+= '/Math.log(10)';
+        document.getElementById('result0').value=str0.concat("=");
+        document.getElementById('result').value=eval(str);
+    }
+    else{
+        result=(eval(str));
+        document.getElementById('result0').value=str0.concat("=");
+        document.getElementById('result').value=result;
+    }
+    var a=document.getElementById('result').value;
+    if(a=="Infinity")
+        document.getElementById('result').value='∞';
+    else if(a=="-Infinity")
+        document.getElementById('result').value='-∞';
+}
+function styleChange(){
+    if(document.getElementById('rows').style.display=='inline'){
+        document.getElementById('rows').style.display='none';
+        document.getElementById('sci').style.display='inline';
+    }
+    else if(document.getElementById('rows').style.display=='none'){
+
+    }
+}
+</SCRIPT>
+
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV id=calculator>
+<DIV class=rescult><TEXTAREA onfocus=this.blur(); id=result0 type="text"></TEXTAREA> <TEXTAREA onfocus=this.blur(); id=result type="text"></TEXTAREA> </DIV>
+<DIV><SECTION class=model-1>
+<DIV onclick=styleChange() class=checkbox><INPUT type=checkbox> 
+<LABEL>科学标准</LABEL> </DIV></SECTION></DIV>
+<DIV id=rows style="DISPLAY: inline">
+<DIV class=row1><BUTTON onclick=zero() id=bt1>C</BUTTON><BUTTON onclick=back() 
+id=bt2>DEL</BUTTON><BUTTON onclick=divide() id=bt3>÷</BUTTON><BUTTON 
+onclick=times() id=bt4>×</BUTTON> </DIV>
+<DIV class=row2><BUTTON onclick=num(7) id=bt5>7</BUTTON><BUTTON onclick=num(8) 
+id=bt6>8</BUTTON><BUTTON onclick=num(9) id=bt7>9</BUTTON><BUTTON onclick=plus() 
+id=bt8>+</BUTTON> </DIV>
+<DIV class=row3><BUTTON onclick=num(4) id=bt9>4</BUTTON><BUTTON onclick=num(5) 
+id=bt10>5</BUTTON><BUTTON onclick=num(6) id=bt11>6</BUTTON><BUTTON 
+onclick=minus() id=bt12>-</BUTTON> </DIV>
+<DIV id=below>
+<DIV id=left>
+<DIV class=row4><BUTTON onclick=num(1) id=bt13>1</BUTTON><BUTTON onclick=num(2) 
+id=bt14>2</BUTTON><BUTTON onclick=num(3) id=bt15>3</BUTTON> </DIV>
+<DIV class=row5><BUTTON onclick=num(0) id=bt16>0</BUTTON><BUTTON onclick=dot() 
+id=bt17>.</BUTTON> </DIV></DIV>
+<DIV id=right><BUTTON onclick=equal() id=bt18>=</BUTTON> </DIV></DIV></DIV>
+<DIV id=sci style="DISPLAY: none">
+<DIV class=sci1><BUTTON onclick=zero() id=bt21>C</BUTTON><BUTTON onclick=back() 
+id=bt22>DEL</BUTTON><BUTTON onclick=pow1() id=bt23>^</BUTTON><BUTTON 
+onclick="num('π')" id=bt24>π</BUTTON><BUTTON onclick=pow2() id=bt25>√</BUTTON> 
+</DIV>
+<DIV class=sci2><BUTTON onclick=sin() id=bt26>sin</BUTTON><BUTTON 
+onclick="num('(')" id=bt27>(</BUTTON><BUTTON onclick="num(')')" 
+id=bt28>)</BUTTON><BUTTON onclick=divide1() id=bt29>1/X</BUTTON><BUTTON 
+onclick=divide() id=bt30>÷</BUTTON> </DIV>
+<DIV class=sci3><BUTTON onclick=cos() id=bt31>cos</BUTTON><BUTTON onclick=num(7) 
+id=bt32>7</BUTTON><BUTTON onclick=num(8) id=bt33>8</BUTTON><BUTTON 
+onclick=num(9) id=bt34>9</BUTTON><BUTTON onclick=times() id=bt35>×</BUTTON> 
+</DIV>
+<DIV class=sci4><BUTTON onclick=tan() id=bt36>tan</BUTTON><BUTTON onclick=num(4) 
+id=bt37>4</BUTTON><BUTTON onclick=num(5) id=bt38>5</BUTTON><BUTTON 
+onclick=num(6) id=bt39>6</BUTTON><BUTTON onclick=minus() id=bt40>-</BUTTON> 
+</DIV>
+<DIV class=sci5><BUTTON onclick=ln() id=bt41>ln</BUTTON><BUTTON onclick=num(1) 
+id=bt42>1</BUTTON><BUTTON onclick=num(2) id=bt43>2</BUTTON><BUTTON 
+onclick=num(3) id=bt44>3</BUTTON><BUTTON onclick=plus() id=bt45>+</BUTTON> 
+</DIV>
+<DIV class=sci6><BUTTON onclick=log() id=bt46>log</BUTTON><BUTTON onclick=num(0) 
+id=bt47>0</BUTTON><BUTTON onclick=dot() id=bt48>.</BUTTON><BUTTON onclick=quyu() 
+id=bt49>%</BUTTON><BUTTON onclick=equal() id=bt50>=</BUTTON> 
+</DIV></DIV></DIV></BODY></HTML>
